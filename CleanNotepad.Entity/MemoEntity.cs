@@ -1,6 +1,4 @@
-﻿using System.Reflection.Metadata.Ecma335;
-
-namespace CleanNotepad.Entity
+﻿namespace CleanNotepad.Entity
 {
     public class MemoEntity
     {

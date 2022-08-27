@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CleanNotepad.DB\CleanNotepad.InterfaceAdapter.csproj" />
+    <ProjectReference Include="..\CleanNotepad.InterfaceAdapter\CleanNotepad.InterfaceAdapter.csproj" />
     <ProjectReference Include="..\CleanNotepad.Usecase\CleanNotepad.UseCase.csproj" />
   </ItemGroup>
 
