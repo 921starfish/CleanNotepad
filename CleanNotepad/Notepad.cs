@@ -4,13 +4,13 @@ namespace CleanNotepad
 {
     public partial class Notepad : Form
     {
-        public Notepad()
+        private SaveNote saveNote;
+
+        public Notepad(SaveNote _saveNote)
         {
             InitializeComponent();
-            saveNote = new SaveNote(null);
+            saveNote = _saveNote;
         }
-
-        private SaveNote saveNote;
 
         private void button1_Click(object sender, EventArgs e)
         {

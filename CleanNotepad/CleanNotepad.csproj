@@ -9,6 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CleanNotepad.DB\CleanNotepad.InterfaceAdapter.csproj" />
     <ProjectReference Include="..\CleanNotepad.Usecase\CleanNotepad.UseCase.csproj" />
   </ItemGroup>
 
