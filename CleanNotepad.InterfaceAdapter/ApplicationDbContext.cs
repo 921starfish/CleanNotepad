@@ -15,7 +15,7 @@ namespace CleanNotepad.InterfaceAdapter
         {
         }
 
-        public DbSet<MemoDBObject> MemoDBObjects { get; set; }
+        internal DbSet<MemoDBObject> MemoDBObjects { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

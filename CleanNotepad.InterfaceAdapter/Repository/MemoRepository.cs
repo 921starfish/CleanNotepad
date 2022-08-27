@@ -8,7 +8,7 @@ namespace CleanNotepad.InterfaceAdapter.Repository
     public class MemoRepository : IMemoRepository
     {
 
-        public ApplicationDbContext context;
+        private ApplicationDbContext context;
 
         public MemoRepository(ApplicationDbContext _context)
         {

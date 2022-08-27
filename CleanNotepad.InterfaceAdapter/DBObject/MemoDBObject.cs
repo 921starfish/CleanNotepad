@@ -1,12 +1,12 @@
 ﻿namespace CleanNotepad.InterfaceAdapter.DBObject
 {
-    public class MemoDBObject
+    internal class MemoDBObject
     {
         // Idは、具象であるRDBのために存在する
-        public int Id { get; set; }
-        public string MemoText { get; set; }
+        internal int Id { get; set; }
+        internal string MemoText { get; set; }
 
-        public MemoDBObject(string memoText)
+        internal MemoDBObject(string memoText)
         {
             MemoText = memoText;
         }
