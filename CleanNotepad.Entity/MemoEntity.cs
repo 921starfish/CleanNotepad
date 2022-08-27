@@ -7,7 +7,15 @@
 
         public MemoEntity(string memoText)
         {
-            MemoText = memoText;
+            if (!IsNullOrEmpty(memoText))
+            {
+                MemoText = memoText;
+            }
+            else
+            {
+                throw new Exception("ビジネスルール違反");
+            }
+            
         }
 
         // 空文字のメモは存在しえない（最重要ビジネスルール）
