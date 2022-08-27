@@ -22,8 +22,8 @@ namespace CleanNotepad.InterfaceAdapter
             modelBuilder.Entity<MemoDBObject>()
                 .HasKey(x => x.Id);
             modelBuilder.Entity<MemoDBObject>()
-                .Property(x => x.MemoText);
+                .Property(x => x.MemoText)
+                .IsRequired();
         }
-
     }
 }
