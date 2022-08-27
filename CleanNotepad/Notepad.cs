@@ -6,11 +6,13 @@ namespace CleanNotepad
     public partial class Notepad : Form
     {
         private SaveNote saveNote;
+        private LoadNote loadNote;
 
-        public Notepad(SaveNote _saveNote)
+        public Notepad(SaveNote _saveNote, LoadNote _loadNote)
         {
             InitializeComponent();
             saveNote = _saveNote;
+            loadNote = _loadNote;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -19,10 +21,11 @@ namespace CleanNotepad
             {
                 var memo = new MemoEntity(textBox1.Text);
                 saveNote.Save(memo);
-                // 描画のための具象処理はUIレイヤーに出るかも
-                listBox1.Items.Add(textBox1.Text);
+
+                // 表示のための具象処理
+                label1.Text = "保存しました：" + memo.MemoText;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 // 例外処理
                 label1.Text = ex.Message;
@@ -31,6 +34,11 @@ namespace CleanNotepad
             {
                 textBox1.Text = string.Empty;
             }
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var memos = loadNote.Load();
+            listBox1.Items.AddRange(memos.Select(x => x.MemoText).ToArray());
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

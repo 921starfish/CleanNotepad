@@ -1,6 +1,8 @@
+using CleanNotepad.InterfaceAdapter;
 using CleanNotepad.InterfaceAdapter.Repository;
 using CleanNotepad.UseCase;
 using CleanNotepad.UseCase.IRepository;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace CleanNotepad
@@ -29,10 +31,12 @@ namespace CleanNotepad
         {
             services.AddSingleton<Notepad>();
 
-            // （広義の）依存性注入
             services.AddScoped<SaveNote>();
+            services.AddScoped<LoadNote>();
 
-            // （狭義の）依存性注入
+            services.AddDbContext<ApplicationDbContext>(
+                options => options.UseInMemoryDatabase("CleanNotepadDB"));
+
             services.AddScoped<IMemoRepository, MemoRepository>();
         }
     }
