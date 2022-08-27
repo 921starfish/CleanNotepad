@@ -18,11 +18,11 @@ namespace CleanNotepad.UseCase
         }
 
         // 「読み込み」はアプリケーション固有のロジック → ユースケース
-        public IEnumerable<MemoEntity> Load()
+        public async Task<IEnumerable<MemoEntity>> LoadAsync()
         {
             // 「読み込み」には具象の知識（例：DB、フォルダ、etc）が必要だが、ユースケースが具象を知ってはならない。
             // InterfaceAdapterレイヤーに、インターフェース経由でアクセスする
-            return memoRepository.LoadMemoEntity();
+            return await memoRepository.LoadMemoEntityAsync();
         }
     }
 

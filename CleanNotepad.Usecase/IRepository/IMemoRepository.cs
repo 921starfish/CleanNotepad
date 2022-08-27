@@ -9,7 +9,7 @@ namespace CleanNotepad.UseCase.IRepository
 {
     public interface IMemoRepository
     {
-        public bool SaveMemoEntity(MemoEntity note);
-        public IEnumerable<MemoEntity> LoadMemoEntity();
+        public Task<bool> SaveMemoEntityAsync(MemoEntity note);
+        public Task<IEnumerable<MemoEntity>> LoadMemoEntityAsync();
     }
 }

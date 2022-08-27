@@ -15,7 +15,7 @@ namespace CleanNotepad.InterfaceAdapter.Repository
             context = _context;
         }
 
-        public bool SaveMemoEntity(MemoEntity memoEntity)
+        public async Task<bool> SaveMemoEntityAsync(MemoEntity memoEntity)
         {
             // インターフェイスアダプターは、エンティティをDBに都合のよいオブジェクトに変換する
             // 処理を切り出してもよい
@@ -24,8 +24,8 @@ namespace CleanNotepad.InterfaceAdapter.Repository
             // ここに具象保存処理
             try
             {
-                var result = context.MemoDBObjects.Add(memoDBObject);
-                context.SaveChanges();
+                var result = await context.MemoDBObjects.AddAsync(memoDBObject);
+                await context.SaveChangesAsync();
                 return true;
             }
             catch
@@ -34,7 +34,7 @@ namespace CleanNotepad.InterfaceAdapter.Repository
             }
         }
 
-        public IEnumerable<MemoEntity> LoadMemoEntity()
+        public async Task<IEnumerable<MemoEntity>> LoadMemoEntityAsync()
         {
             return context.MemoDBObjects.Select(x => new MemoEntity(x.MemoText));
         }

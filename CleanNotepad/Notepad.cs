@@ -15,12 +15,12 @@ namespace CleanNotepad
             loadNote = _loadNote;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
             try
             {
                 var memo = new MemoEntity(textBox1.Text);
-                saveNote.Save(memo);
+                await saveNote.SaveAsync(memo);
 
                 // •\Ž¦‚Ì‚½‚ß‚Ì‹ïÛˆ—
                 label1.Text = "•Û‘¶‚µ‚Ü‚µ‚½F" + memo.MemoText;
@@ -35,9 +35,9 @@ namespace CleanNotepad
                 textBox1.Text = string.Empty;
             }
         }
-        private void button2_Click(object sender, EventArgs e)
+        private async void button2_Click(object sender, EventArgs e)
         {
-            var memos = loadNote.Load();
+            var memos = await loadNote.LoadAsync();
             listBox1.Items.AddRange(memos.Select(x => x.MemoText).ToArray());
         }
 

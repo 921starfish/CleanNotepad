@@ -14,11 +14,11 @@ namespace CleanNotepad.UseCase
         }
 
         // 「保存する」のはアプリケーション固有のロジック → ユースケース
-        public bool Save(MemoEntity note)
+        public async Task<bool> SaveAsync(MemoEntity note)
         {
             // 「保存」には具象の知識（例：DB、フォルダ、etc）が必要だが、ユースケースが具象を知ってはならない。
             // InterfaceAdapterレイヤーに、インターフェース経由でアクセスする
-            return memoRepository.SaveMemoEntity(note);
+            return await memoRepository.SaveMemoEntityAsync(note);
         }
     }
 }
