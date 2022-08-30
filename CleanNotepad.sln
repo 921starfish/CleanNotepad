@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanNotepad", "CleanNotepad\CleanNotepad.csproj", "{75FDE169-368B-4BAA-AD9C-A683F033037C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanNotepad.Outer", "CleanNotepad.Outer\CleanNotepad.Outer.csproj", "{75FDE169-368B-4BAA-AD9C-A683F033037C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanNotepad.Entity", "CleanNotepad.Entity\CleanNotepad.Entity.csproj", "{827BAB2E-2352-4A95-BAA1-B91A9C45849A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanNotepad.UseCase", "CleanNotepad.Usecase\CleanNotepad.UseCase.csproj", "{EC1AED8D-B5ED-4B78-BED4-D5E888F0CE38}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanNotepad.InterfaceAdapter", "CleanNotepad.InterfaceAdapter\CleanNotepad.InterfaceAdapter.csproj", "{C38C2B28-4897-41D2-9015-6AB11A077B12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanNotepad.InterfaceAdapterForDB", "CleanNotepad.InterfaceAdapterForDB\CleanNotepad.InterfaceAdapterForDB.csproj", "{C38C2B28-4897-41D2-9015-6AB11A077B12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanNotepad.Entity.Test", "CleanNotepad.Entity.Test\CleanNotepad.Entity.Test.csproj", "{1559C3FE-D8C5-4A27-8789-2A6650E1EFD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanNotepad.Entity.Test", "CleanNotepad.Entity.Test\CleanNotepad.Entity.Test.csproj", "{1559C3FE-D8C5-4A27-8789-2A6650E1EFD9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

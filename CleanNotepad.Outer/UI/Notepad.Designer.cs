@@ -1,4 +1,4 @@
-﻿namespace CleanNotepad
+﻿namespace CleanNotepad.Outer.UI
 {
     partial class Notepad
     {

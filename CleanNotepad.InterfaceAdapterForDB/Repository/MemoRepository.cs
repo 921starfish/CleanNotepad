@@ -1,9 +1,8 @@
 ﻿using CleanNotepad.Entity;
-using CleanNotepad.InterfaceAdapter.DBObject;
+using CleanNotepad.InterfaceAdapterForDB.DBObject;
 using CleanNotepad.UseCase.IRepository;
-using System.Security.Cryptography.X509Certificates;
 
-namespace CleanNotepad.InterfaceAdapter.Repository
+namespace CleanNotepad.InterfaceAdapterForDB.Repository
 {
     public class MemoRepository : IMemoRepository
     {

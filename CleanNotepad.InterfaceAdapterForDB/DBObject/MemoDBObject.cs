@@ -1,4 +1,4 @@
-﻿namespace CleanNotepad.InterfaceAdapter.DBObject
+﻿namespace CleanNotepad.InterfaceAdapterForDB.DBObject
 {
     internal class MemoDBObject
     {

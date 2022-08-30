@@ -1,7 +1,7 @@
 using CleanNotepad.Entity;
 using CleanNotepad.UseCase;
 
-namespace CleanNotepad
+namespace CleanNotepad.Outer.UI
 {
     public partial class Notepad : Form
     {

@@ -1,13 +1,7 @@
-﻿using CleanNotepad.InterfaceAdapter.DBObject;
+﻿using CleanNotepad.InterfaceAdapterForDB.DBObject;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace CleanNotepad.InterfaceAdapter
+namespace CleanNotepad.InterfaceAdapterForDB
 {
     public class ApplicationDbContext : DbContext
     {

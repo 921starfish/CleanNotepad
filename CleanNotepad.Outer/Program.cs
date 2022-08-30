@@ -1,11 +1,12 @@
-using CleanNotepad.InterfaceAdapter;
-using CleanNotepad.InterfaceAdapter.Repository;
+using CleanNotepad.InterfaceAdapterForDB;
+using CleanNotepad.InterfaceAdapterForDB.Repository;
+using CleanNotepad.Outer.UI;
 using CleanNotepad.UseCase;
 using CleanNotepad.UseCase.IRepository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace CleanNotepad
+namespace CleanNotepad.Outer
 {
     internal static class Program
     {
