@@ -38,7 +38,7 @@ namespace CleanNotepad.Outer.UI
         private async void button2_Click(object sender, EventArgs e)
         {
             // “Ç‚İ‚İˆ—
-            var memos = await memoController.loadMemoAsync();
+            var memos = await memoController.LoadMemoAsync();
 
             // •\¦‚Ì‚½‚ß‚Ì‹ïÛˆ—
             listBox1.Items.Clear();

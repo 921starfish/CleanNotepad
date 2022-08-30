@@ -25,7 +25,7 @@ namespace CleanNotepad.InterfaceAdapterForUI
             return memo.MemoText;
         }
 
-        public async Task<string[]> loadMemoAsync()
+        public async Task<string[]> LoadMemoAsync()
         {
             // 読み込みはユースケースが担う
             var memos = await loadNote.LoadAsync();
