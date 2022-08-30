@@ -22,5 +22,7 @@
                 throw new Exception("ビジネスルール違反");
             }
         }
+
+        // public MemoEntity(string memoText) => MemoText = IsNotMemo(memoText) ? throw new Exception("ビジネスルール違反") : memoText;
     }
 }
