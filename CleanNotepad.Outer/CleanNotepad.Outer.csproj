@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CleanNotepad.InterfaceAdapterForDB\CleanNotepad.InterfaceAdapterForDB.csproj" />
+    <ProjectReference Include="..\CleanNotepad.InterfaceAdapterForUI\CleanNotepad.InterfaceAdapterForUI.csproj" />
     <ProjectReference Include="..\CleanNotepad.Usecase\CleanNotepad.UseCase.csproj" />
   </ItemGroup>
 

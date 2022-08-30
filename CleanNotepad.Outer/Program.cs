@@ -1,5 +1,6 @@
 using CleanNotepad.InterfaceAdapterForDB;
 using CleanNotepad.InterfaceAdapterForDB.Repository;
+using CleanNotepad.InterfaceAdapterForUI;
 using CleanNotepad.Outer.UI;
 using CleanNotepad.UseCase;
 using CleanNotepad.UseCase.IRepository;
@@ -31,6 +32,8 @@ namespace CleanNotepad.Outer
         private static void ConfigureServices(ServiceCollection services)
         {
             services.AddSingleton<Notepad>();
+
+            services.AddScoped<MemoController>();
 
             services.AddScoped<SaveNote>();
             services.AddScoped<LoadNote>();

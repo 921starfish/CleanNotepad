@@ -1,29 +1,29 @@
 using CleanNotepad.Entity;
+using CleanNotepad.InterfaceAdapterForUI;
 using CleanNotepad.UseCase;
+using System.Windows.Forms;
 
 namespace CleanNotepad.Outer.UI
 {
     public partial class Notepad : Form
     {
-        private SaveNote saveNote;
-        private LoadNote loadNote;
+        private MemoController memoController;
 
-        public Notepad(SaveNote _saveNote, LoadNote _loadNote)
+        public Notepad(MemoController _memoController)
         {
             InitializeComponent();
-            saveNote = _saveNote;
-            loadNote = _loadNote;
+            memoController = _memoController;
         }
 
         private async void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                var memo = new MemoEntity(textBox1.Text);
-                await saveNote.SaveAsync(memo);
+                // 保存処理
+                var memoText = await memoController.SaveMemoAsync(textBox1.Text);
 
                 // 表示のための具象処理
-                label1.Text = "保存しました：" + memo.MemoText;
+                label1.Text = "保存しました：" + memoText;
             }
             catch (Exception ex)
             {
@@ -37,8 +37,12 @@ namespace CleanNotepad.Outer.UI
         }
         private async void button2_Click(object sender, EventArgs e)
         {
-            var memos = await loadNote.LoadAsync();
-            listBox1.Items.AddRange(memos.Select(x => x.MemoText).ToArray());
+            // 読み込み処理
+            var memos = await memoController.loadMemoAsync();
+
+            // 表示のための具象処理
+            listBox1.Items.Clear();
+            listBox1.Items.AddRange(memos);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
